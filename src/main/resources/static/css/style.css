@@ -1,0 +1,55 @@
+:root {
+    --color1: #343a40;
+    --color2: #f8f9fa;
+    --color3: #ffffff;
+    --color4: #f7f7f7;
+    --color5: #dfdfdf;
+    --color6: #17a2b8;
+    --color7: #dc3545;
+    --color8: #218838;
+}
+.logout {
+    text-align: right;
+    align-items: center;
+}
+.logout a {
+    color: var(--bs-gray);
+}
+header {
+    background: var(--color1);
+    color: var(--bs-white);
+}
+.left-bar {
+    background: var(--bs-white);
+}
+.admin-panel {
+    background: var(--color2);
+}
+.users-table {
+    background: var(--color3);
+    padding-left: 20px;
+}
+h4 {
+    background: var(--color4);
+}
+.sidebar-active {
+    background-color: var(--bs-primary);
+    border-radius: 3px;
+}
+.sidebar-active a {
+    color: var(--bs-white);
+}
+.edit-button {
+    background-color: var(--color6);
+    border: none;
+}
+.delete-button {
+    background-color: var(--color7);
+    border: none;
+}
+.create-button {
+    background-color: var(--color8);
+    border: none;
+}
+
+

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:tiles="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title tiles:fragment="title">Login Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<section>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-2 pt-5">
+                <form name="f" th:action="@{/login}" method="post">
+                    <fieldset>
+                        <legend>Please Sign in</legend>
+                        <div th:if="${param.error}" class="alert alert-error">
+                            <p th:text="${errorMessage}">
+                                Invalid username and password.
+                            </p>
+                        </div>
+                        <div th:if="${param.logout}" class="alert alert-success">
+                            <p th:text="${errorMessage}">
+                                You have been logged out.
+                            </p>
+                        </div>
+                        <input type="email" class="form-control" id="username" name="username" placeholder="Enter your email"/>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Enter password"/>
+                        <div class="form-actions d-grid gap-2 mx-auto pt-2">
+                            <button type="submit" class="btn btn-primary">Sign in</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
